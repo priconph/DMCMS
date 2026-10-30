@@ -1,0 +1,48 @@
+# Large / binary documents
+*.xls
+*.xlsx
+*.xlsm
+*.xlsb
+*.csv
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.pdf
+*.fdf
+
+# Archives
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.z
+
+# Design source files
+*.psd
+*.ai
+
+# Backups, logs, temp
+*.BAK
+*.bak
+*.log
+*.tmp
+*.map
+
+# Certificates / private keys
+*.p12
+*.pfx
+*.pem
+*.key
+
+# Uploads
+uploads/
+upload/
+
+# OS / IDE
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,14 @@
+INSERT INTO t_dieset_cycle
+(dc_d_id,dc_accumulated_shots,dc_start_date,dc_end_date,dc_maintenance_cycle,dc_status)
+SELECT d_id, '0', '0000-00-00','0000-00-00',d_maintenance_cycle,'ongoing'
+FROM t_device;
+
+INSERT INTO db_dmcms.t_dieset_cycle
+(dc_d_id,dc_accumulated_shots,dc_start_date,dc_end_date,dc_maintenance_cycle,dc_status)
+SELECT d_id,'0,', '0000-00-00','0000-00-00',d_maintenance_cycle,'ongoing'
+FROM db_pps.t_device WHERE d_id='2122';
+
+INSERT INTO db_dmcms.t_dieset_cycle
+(dc_d_id,dc_accumulated_shots,dc_start_date,dc_end_date,dc_maintenance_cycle,dc_status)
+SELECT d_id,'0,', '0000-00-00','0000-00-00',d_maintenance,'ongoing'
+FROM db_pps.t_device WHERE d_id NOT IN (SELECT `dc_d_id` FROM `db_dmcms`.`t_dieset_cycle`);
